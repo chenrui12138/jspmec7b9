@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.MeiritiwenDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.entity.MeiritiwenEntity" id="meiritiwenMap">
+        <result property="zhanghao" column="zhanghao"/>
+        <result property="xingming" column="xingming"/>
+        <result property="shenfenzheng" column="shenfenzheng"/>
+        <result property="shouji" column="shouji"/>
+        <result property="xingbie" column="xingbie"/>
+        <result property="zhuzhi" column="zhuzhi"/>
+        <result property="dangqianwendu" column="dangqianwendu"/>
+        <result property="tanceshijian" column="tanceshijian"/>
+        <result property="beizhu" column="beizhu"/>
+    </resultMap>
+
+	<select id="selectListVO"
+		resultType="com.entity.vo.MeiritiwenVO" >
+		SELECT * FROM meiritiwen  meiritiwen         
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.entity.vo.MeiritiwenVO" >
+		SELECT  meiritiwen.* FROM meiritiwen  meiritiwen 	
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.entity.view.MeiritiwenView" >
+
+		SELECT  meiritiwen.* FROM meiritiwen  meiritiwen 	        
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.entity.view.MeiritiwenView" >
+		SELECT * FROM meiritiwen  meiritiwen <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+</mapper>

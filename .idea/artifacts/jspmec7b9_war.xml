@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jspmec7b9:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>jspmec7b9</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="jspmec7b9.war">
+      <element id="artifact" artifact-name="jspmec7b9:war exploded" />
+    </root>
+  </artifact>
+</component>
